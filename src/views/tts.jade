@@ -1,0 +1,36 @@
+extends layout
+
+block append head
+    meta( name="ttshead", content="try bluemix tts service" )
+    meta( http-equiv="X-UA-Compatible" content="IE=edge" )
+    meta( name="viewport" content="width=device-width, initial-scale=1" )
+    link( href="/css/watson-bootstrap-style.css" rel="stylesheet",  type="text/css" )
+    link( href="/css/style.css" rel="stylesheet",  type="text/css" )
+    script() window.$ = window.jQuery = require(__dirname + '/../public/js/jquery-1.11.3.min.js')
+    script( src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" )
+    script( src="/js/constants.js" )
+    script( src="/js/mytts.js" )
+    //- cannot have space line
+    //- script( src="https://code.jquery.com/jquery-1.11.3.min.js" )
+
+
+block content
+  #form-display
+    form(role="form", id="frm1", action="/api/synthesize", method="post")
+        div(class="form-div")
+          label(for="txt1") Input the text for TextToSpeech
+          input(type="text", name="txt1", id="txt1")
+          input(type="text", name="voicekind", id="voicekind", value="")
+          label 
+             input(type="checkbox", name="download", id="download")
+             = "download speech?" 
+          input(type='submit')    
+
+  #div-alink
+    a(href="", id="myalink", name="myalink") myalink for xhr dnload
+
+  #footer
+     div Copyright © 3hd.me #{+new Date().getFullYear()}  
+     a(href='/page?name=about') About 
+     | | 
+     a(href='/page?name=contact') Contact Us
