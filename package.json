@@ -4,6 +4,7 @@
   "description": "",
   "main": "main.js",
   "dependencies": {
+    "debug": "^2.2.0",
     "pretty-bytes": "^2.0.1"
   },
   "devDependencies": {

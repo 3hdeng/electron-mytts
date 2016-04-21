@@ -38,8 +38,8 @@ var cookieParser = require('cookie-parser');
 var stack = require('../routes/stack');
 //var app = express();
 
-var multer  = require('multer')
-var upload = multer({ dest: '../uploads/' })
+//var multer  = require('multer')
+//var upload = multer({ dest: '../uploads/' })
 
 // view engine setup
 app.set('views', path.join(__dirname, '/../views'));
@@ -54,7 +54,7 @@ app.use(express.static(path.join(__dirname, '/../public')));
 app.get('/home', stack.home);
 app.get('/tts',stack.tts);
 
-app.post('/jsondata', upload.single('jsonfile'),stack.jsondata);
+//app.post('/jsondata', upload.single('jsonfile'),stack.jsondata);
 
 
 };

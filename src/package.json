@@ -1,5 +1,5 @@
 {
-  "name": "mytts2",
+  "name": "mytts by electron",
   "version": "0.1.0",
   "description": "A sample nodejs app for Bluemix that use the Text to Speech service",
   "dependencies": {
@@ -18,20 +18,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/watson-developer-cloud/text-to-speech-nodejs.git"
+    "url": "https://3hdeng@github.com/pypdf/mytts.git"
   },
-  "author": "IBM Corp.",
+  "author": "3h deng",
   "contributors": [
     {
-      "name": "German Attanasio Ruiz",
-      "email": "germanatt@us.ibm.com"
+      "name": "3h deng",
+      "email": "3hdeng@gmail.com"
     }
   ],
   "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/watson-developer-cloud/text-to-speech-nodejs/issues"
-  },
-  "scripts": {
+   "scripts": {
     "start": "node app.js"
   }
 }
