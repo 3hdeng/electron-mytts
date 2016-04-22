@@ -4,9 +4,11 @@
 <title>jQuery injection into webview preload</title>
 </head>
 <body style="overflow:hidden;">
-<webview id="webview" preload="./injectJquery.js" src="http://localhost:3000/tts" style="position:absolute;width:100%;height:100%;"></webview>
+<webview id="webview"  src="http://localhost:3000/tts" style="position:absolute;width:100%;height:100%;"></webview>
 <script>
 // need to have a script tag make webview work even if you don't plan to use it...
+// var wv = document.getElementById("webview");
+//xxx wv.openDevTools();
 </script>
 </body>
 </html>
