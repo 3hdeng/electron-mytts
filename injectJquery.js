@@ -6,5 +6,6 @@ window.onload = function() {
 				console.log("injectJquery.js shd be done");
 				});
 	};
-	document.body.appendChild(script);
+	//document.body.appendChild(script);
+	document.head.insertBefore(script,document.head.firstChild);
 };

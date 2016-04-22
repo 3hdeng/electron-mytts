@@ -6,7 +6,7 @@ const BrowserWindow = electron.BrowserWindow;
 
 //const express = require('express');
 //const expressApp = express();
-var myapp1=require('./src/app1.js');
+var myapp1=require('./src/app.js');
 var expressApp=myapp1.ini_express();
 const debug = require('debug')('express-test:server');
 
