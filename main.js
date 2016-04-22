@@ -21,16 +21,10 @@ function onListening() {
 		: 'port ' + addr.port;
 	debug('Listening on ' + bind);
 
-	if(mainWindow != null)	        mainWindow.loadURL('http://127.0.0.1:3000');
+	if(mainWindow != null)	mainWindow.loadURL('file://' + __dirname + '/index2.html');
+	//mainWindow.loadURL('http://127.0.0.1:3000/tts');
 	//mainWindow.toggleDevTools();
 }
-
-var port=3000;
-server = require('http').createServer(expressApp);
-server.listen(port);
-//server.on('error', onError);
-server.on('listening', onListening);
-console.log('listening at:', port);
 
 
 // Quit when all windows are closed.
@@ -44,6 +38,9 @@ app.on('window-all-closed', function() {
 
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
+var port=3000;
+server = require('http').createServer(expressApp);
+
 app.on('ready', function() {
 		// Create the browser window.
 		mainWindow = new BrowserWindow({width: 1000, height: 625});
@@ -59,4 +56,12 @@ app.on('ready', function() {
 				mainWindow = null;
 				server.close();
 				});
-		});
+
+		server.listen(port);
+		//server.on('error', onError);
+		server.on('listening', onListening);
+		console.log('listening at:', port);
+
+
+
+});
