@@ -6,6 +6,13 @@ block append head
     meta( name="viewport" content="width=device-width, initial-scale=1" )
     link( href="/css/watson-bootstrap-style.css" rel="stylesheet",  type="text/css" )
     link( href="/css/style.css" rel="stylesheet",  type="text/css" )
+    script(src="https://code.jquery.com/jquery-1.11.3.min.js")
+    script.
+        console.log("beginning of log?");
+    script.
+        if (typeof jQuery == 'undefined') {
+            console.log("still need document.write even when the page is loaded by webView");
+            document.write('<script type="text/javascript" src="/js/jquery-1.11.3.min.js"><\/script>');}
     script( src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" )
     script( src="/js/constants.js" )
     script( src="/js/mytts.js" )
