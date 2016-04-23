@@ -1,5 +1,5 @@
 {
-  "name": "mytts by electron",
+  "name": "elctron-mytts",
   "version": "0.1.0",
   "description": "A sample nodejs app for Bluemix that use the Text to Speech service",
   "dependencies": {
