@@ -24,8 +24,12 @@ block append head
 
 
 block content
+ div(class="window mywindow")
+  header(class="toolbar toolbar-header")
+    h1(class="title") Header
+
   #form-display
-   div(class="mybigblock")
+    div(class="mybigblock")
      form(role="form", id="frm1", action="/api/synthesize", method="post")
          div(class="form-div")
           label(for="txt1") Input the text for TextToSpeech
@@ -39,7 +43,7 @@ block content
      #div-alink
      a(href="", id="myalink", name="myalink") myalink for xhr dnload
 
-  #footer
+  footer(class="toolbar toolbar-footer")
      div Copyright © 3hd.me #{+new Date().getFullYear()}  
      a(href='/page?name=about') About 
      | | 
