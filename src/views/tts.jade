@@ -30,18 +30,20 @@ block content
 
   #form-display
     div(class="mybigblock")
-     form(role="form", id="frm1", action="/api/synthesize", method="post")
+     form(role="form", id="frm1", action="/api/synthesize", method="post" onsubmit="disableFormSubmit()")
          div(class="form-div")
           label(for="txt1") Input the text for TextToSpeech
           input(type="text", name="txt1", id="txt1")
           input(type="text", name="voicekind", id="voicekind", value="")
           label 
              input(type="checkbox", name="download", id="download")
-             = "download speech?" 
-          input(type='submit')    
-
+             = " download speech?" 
+          div()          
+          button(id="btnSubmit" class="btn btn-default mybutton") 
+            span(class="icon icon-megaphone")
+     
      #div-alink
-     a(href="", id="myalink", name="myalink") myalink for xhr dnload
+     a(href="", id="myalink", name="myalink" class="myhide") myalink for xhr dnload
 
   footer(class="toolbar toolbar-footer")
      div Copyright © 3hd.me #{+new Date().getFullYear()}  

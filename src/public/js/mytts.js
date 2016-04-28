@@ -137,9 +137,13 @@ $(document).ready(function() {
 		var chkbox=formElement.elements.namedItem("download");
 		var dnloadChked= chkbox.checked; //chkbox.hasAttribute("checked");		
 		console.log("chkbox value=" + chkbox.value + " ; dnloadChked= " + dnloadChked);
+                var btnSubmit=document.getElementById('btnSubmit');
+                btnSubmit.disabled=false;
 
 		formElement.onsubmit=function(e){
 			e.preventDefault();
+                        formElement.onsubmit = function(){ return false; };
+                        btnSubmit.disabled = true;
 			xhr_submit(formElement);
 		};
 		//====
