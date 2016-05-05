@@ -44,7 +44,7 @@ server = require('http').createServer(expressApp);
 app.on('ready', function() {
 		// Create the browser window.
 		mainWindow = new BrowserWindow({width: 1000, height: 625});
-		mainWindow.webContents.openDevTools();
+		//mainWindow.webContents.openDevTools();
 		// and load the index.html of the app.
 		// mainWindow.loadURL('file://' + __dirname + 'src/public/index.html');
 		// mainWindow.loadURL('http://localhost:3000/tts');
